@@ -15,3 +15,5 @@ MonoBehaviour:
   <CustomerBinders>k__BackingField:
   - {fileID: 11400000, guid: 1d7b8c48fc38d0f4c963c65425203ddc, type: 2}
   - {fileID: 11400000, guid: 70602630f8e7d9843a6d09693e725896, type: 2}
+  - {fileID: 11400000, guid: 53ef6e7133a27f145ab391e2486981b3, type: 2}
+  - {fileID: 11400000, guid: 58e859f836e7a05418b99df4a3bc070c, type: 2}
