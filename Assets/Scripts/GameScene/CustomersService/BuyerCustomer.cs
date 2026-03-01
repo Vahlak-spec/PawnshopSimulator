@@ -14,7 +14,7 @@ namespace PawnshopSimulator.Customers
 
         private NavMeshMoveModule _moveModule;
         private CustomerBuyModule _buyModule;
-        private Transform _characterTransform;
+        private GameObject _characterGO;
 
         private Transform _start;
         private Transform _end;
@@ -39,9 +39,9 @@ namespace PawnshopSimulator.Customers
         {
             _moveModule = characterController.GetModule<NavMeshMoveModule>();
             _buyModule = characterController.GetModule<CustomerBuyModule>();
-            _characterTransform = characterController.transform;
+            _characterGO = characterController.gameObject;
 
-            _characterTransform.position = start.position;
+            _characterGO.transform.position = start.position;
 
             _ticker = ticker;
             _start = start;
@@ -74,6 +74,7 @@ namespace PawnshopSimulator.Customers
             _moveModule.SetDestination(_end.position);
             yield return new WaitUntil(() => _moveModule.HasReachedDestination);
 
+            _characterGO.SetActive(false);
             onComplete?.Invoke(this);
         }
 
@@ -84,7 +85,7 @@ namespace PawnshopSimulator.Customers
 
             foreach (var s in all)
             {
-                if (Vector3.Distance(_characterTransform.position, s.Transform.position) <= _searchRadius)
+                if (Vector3.Distance(_characterGO.transform.position, s.Transform.position) <= _searchRadius)
                     inRadius.Add(s);
             }
 

@@ -16,7 +16,7 @@ namespace PawnshopSimulator.Customers
 
         private NavMeshMoveModule _moveModule;
         private CustomerSellModule _sellModule;
-        private Transform _characterTransform;
+        private GameObject _characterGO;
 
         private Transform _start;
         private Transform _end;
@@ -43,14 +43,14 @@ namespace PawnshopSimulator.Customers
         {
             _moveModule = characterController.GetModule<NavMeshMoveModule>();
             _sellModule = characterController.GetModule<CustomerSellModule>();
-            _characterTransform = characterController.transform;
+            _characterGO = characterController.gameObject;
 
             _ticker = ticker;
             _start = start;
             _end = end;
             _buidRegisterService = buidRegisterService;
 
-            _characterTransform.position = _start.position;
+            _characterGO.transform.position = _start.position;
         }
 
         public override void LaunchProcces(Action<CustomerBase> onComplete)
@@ -81,6 +81,7 @@ namespace PawnshopSimulator.Customers
                     if (chosenRegister == null)
                     {
                         yield return WalkTo(_end.position);
+                        _characterGO.SetActive(false);
                         onComplete?.Invoke(this);
                         yield break;
                     }
@@ -124,6 +125,7 @@ namespace PawnshopSimulator.Customers
             }
 
             yield return WalkTo(_end.position);
+            _characterGO.SetActive(false);
             onComplete?.Invoke(this);
         }
 
@@ -141,7 +143,7 @@ namespace PawnshopSimulator.Customers
             foreach (var r in all)
             {
                 if (!r.IsOccupied &&
-                    Vector3.Distance(_characterTransform.position, r.Transform.position) <= _searchRadius)
+                    Vector3.Distance(_characterGO.transform.position, r.Transform.position) <= _searchRadius)
                 {
                     candidates.Add(r);
                 }
