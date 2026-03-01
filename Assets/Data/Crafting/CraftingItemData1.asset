@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64a05dded15fc5a47b5d7d8b5998ff41, type: 3}
+  m_Name: CraftingItemData1
+  m_EditorClassIdentifier: 
+  ResultItem: {fileID: 11400000, guid: 56fe2f6273fdd544c9e328fd045b6050, type: 2}
+  RecurseNeed: {fileID: 11400000, guid: 1262a148717d0104ca40ad0f4b581831, type: 2}
+  CraftingTime: 10

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07d4915c474b0084885a7b57b3428533, type: 3}
+  m_Name: CustomersData
+  m_EditorClassIdentifier: 
+  <CustomerBinders>k__BackingField:
+  - {fileID: 11400000, guid: 1d7b8c48fc38d0f4c963c65425203ddc, type: 2}
+  - {fileID: 11400000, guid: 70602630f8e7d9843a6d09693e725896, type: 2}

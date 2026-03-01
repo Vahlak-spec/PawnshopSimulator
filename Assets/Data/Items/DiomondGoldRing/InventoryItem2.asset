@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2759a99d42eb14f4e853e652045b13b0, type: 3}
+  m_Name: InventoryItem2
+  m_EditorClassIdentifier: 
+  <ItemName>k__BackingField: Diomond Gold ring
+  <Prefab>k__BackingField: {fileID: 6762149444377683968, guid: 30d25a820c801014abb88a90527e0c85, type: 3}
+  <RecurseGroupData>k__BackingField: {fileID: 11400000, guid: 9999984c845bb6f449549bb60e165fcc, type: 2}
+  _itemStateDatas:
+  - <ItemState>k__BackingField: 0
+    <Sprite>k__BackingField: {fileID: 21300000, guid: 829e9290dbe25b8448ef505555762bd7, type: 3}
+    <Price>k__BackingField: 200
+  - <ItemState>k__BackingField: 1
+    <Sprite>k__BackingField: {fileID: 21300000, guid: 829e9290dbe25b8448ef505555762bd7, type: 3}
+    <Price>k__BackingField: 400
