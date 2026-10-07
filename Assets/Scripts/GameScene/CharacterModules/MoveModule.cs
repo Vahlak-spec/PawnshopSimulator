@@ -36,7 +36,7 @@ namespace PawnshopSimulator.Characters
         {
             while (true)
             {
-                _body.velocity = _tempVelocity;
+                _body.linearVelocity = _tempVelocity;
                 yield return new WaitForEndOfFrame();
             }
         }
